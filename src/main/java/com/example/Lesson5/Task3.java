@@ -1,9 +1,8 @@
 package com.example.Lesson5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Task1 {
+public class Task3 {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
@@ -15,29 +14,35 @@ public class Task1 {
         int[][] arr = new int[n][k];
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < k; j++) {
-                arr[i][j] = (int) (Math.random() * 10);
+                arr[i][j] = scanner.nextInt();
             }
         }
 
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < k; j++) {
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + " ");
             }
             System.out.println();
         }
 
-        System.out.print("Vvedite chislo dlya dobavleniya: ");
-        int number = scanner.nextInt();
-        int sum = 0;
+        System.out.println();
 
         for (int i = 0; i < n; i++) {
-            for (int j = 0; j < k; j++) {
-               arr[i][j] += number;
-               sum = sum + arr[i][j];
-               System.out.print(arr[i][j] + " ");
+            if (i % 2 == 0) {
+                for (int j = 0; j < k; j++) {
+                    System.out.print(arr[i][j] + " ");
+                }
+            }
+            else
+            {
+                for (int j = k -1; j >= 0; j--){
+                    System.out.print(arr[i][j] + " ");
+                }
             }
             System.out.println();
         }
-        System.out.println("Summa = " + sum);
+
     }
 }
+
+
