@@ -32,10 +32,8 @@ public class Task3 {
                 for (int j = 0; j < k; j++) {
                     System.out.print(arr[i][j] + " ");
                 }
-            }
-            else
-            {
-                for (int j = k -1; j >= 0; j--){
+            } else {
+                for (int j = k - 1; j >= 0; j--) {
                     System.out.print(arr[i][j] + " ");
                 }
             }
