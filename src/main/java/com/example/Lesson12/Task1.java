@@ -1,4 +1,4 @@
-package com.example.Lsson12;
+package com.example.Lesson12;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
